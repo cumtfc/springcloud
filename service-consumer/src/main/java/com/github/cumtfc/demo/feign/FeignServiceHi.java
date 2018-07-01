@@ -7,7 +7,7 @@ import org.springframework.cloud.openfeign.FeignClient;
  * @author 冯楚
  * @date 2018/6/8-19:12
  */
-@FeignClient(value = "service-hi")
+@FeignClient(value = "service-hi",fallback = FeignServiceHiHystrix.class)
 public interface FeignServiceHi extends ServiceHi {
 
 }
