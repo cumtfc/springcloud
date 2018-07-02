@@ -3,13 +3,6 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
 
-server:
-  port: 8764
-
-spring:
-  application:
-    name: service-consumer
-
 feign:
   hystrix:
     #此项不为true，feign断路器不生效
@@ -26,11 +19,19 @@ feign:
     response:
       # 配置响应GZIP压缩
       enabled: true
-#springboot2.0以上base-path为`/actuator`且要设置include属性指定暴露的端点
+#springboot2.0以上base-path为`/actuator`
 management:
   endpoints:
     web:
       exposure:
+        #actuator默认只公开info和health接口，如果需要获取更多信息，则需增加如下配置
         include: "*"
       base-path: /
 
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+
+testConfig:
+  value: 1

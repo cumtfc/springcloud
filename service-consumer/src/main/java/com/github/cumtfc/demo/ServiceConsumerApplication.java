@@ -19,11 +19,12 @@ import org.springframework.web.client.RestTemplate;
 @EnableHystrixDashboard
 @EnableDiscoveryClient
 @EnableFeignClients(basePackages = {"com.github.cumtfc.demo.feign"})
-@SpringBootApplication(scanBasePackages = {"com.github.cumtfc.demo.service","com.github.cumtfc.demo.feign","com.github.cumtfc.demo.controller"})
-public class ServiceRibbonApplication {
+@SpringBootApplication(scanBasePackages = {"com.github.cumtfc.demo.service", "com.github.cumtfc.demo.feign",
+    "com.github.cumtfc.demo.controller"})
+public class ServiceConsumerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ServiceRibbonApplication.class, args);
+        SpringApplication.run(ServiceConsumerApplication.class, args);
     }
 
     @Bean
