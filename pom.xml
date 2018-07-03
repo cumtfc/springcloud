@@ -15,6 +15,7 @@
     <module>service-consumer</module>
     <module>interface</module>
     <module>service-zuul</module>
+    <module>server-zipkin</module>
   </modules>
 
 </project>

@@ -9,6 +9,7 @@
         <module name="config-server" />
         <module name="eureka-client" />
         <module name="eureka-server" />
+        <module name="server-zipkin" />
         <module name="service-consumer" />
         <module name="service-zuul" />
       </profile>
